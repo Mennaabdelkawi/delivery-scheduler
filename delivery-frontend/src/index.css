@@ -1,0 +1,155 @@
+/* Container */
+.container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  color: #333;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #2c3e2f;
+}
+
+h2 {
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #4a5a4a;
+}
+
+/* Product Types Buttons */
+.types-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.type-btn {
+  padding: 0.5rem 1.8rem;
+  font-size: 0.9rem;
+  border: 1.5px solid #8fbf7f;
+  background: #f7faf6;
+  border-radius: 20px;
+  color: #4a5a4a;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  user-select: none;
+  min-width: 110px;
+}
+
+.type-btn:hover {
+  background-color: #e6f0de;
+  border-color: #7aaa5a;
+}
+
+.type-btn.selected {
+  background-color: #a4c66a;
+  border-color: #7a9a44;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Fetch Button */
+.fetch-btn {
+  margin: 2rem auto 0 auto;
+  background-color: #7aa14d;
+  color: white;
+  border: none;
+  padding: 0.7rem 3rem;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  display: block;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 3px 8px rgba(122,161,77,0.5);
+}
+
+.fetch-btn:hover:not(:disabled) {
+  background-color: #679436;
+  box-shadow: 0 5px 12px rgba(103,148,54,0.7);
+}
+
+.fetch-btn:disabled {
+  background-color: #b8cc9f;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Error message */
+.error {
+  color: #bb2e26;
+  font-weight: 600;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Delivery slots grid */
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+/* Slot box */
+.slot {
+  background-color: #f5f7f2;
+  padding: 0.5rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  color: #3e4b38;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  user-select: none;
+  border: 1px solid transparent;
+  cursor: default;
+  transition: background-color 0.2s ease;
+}
+
+.slot:hover {
+  background-color: #e1e9d5;
+}
+
+.slot.green {
+  background-color: #d3e6bc;
+  border: 1.5px solid #78994b;
+  color: #496227;
+  font-weight: 600;
+}
+
+.slot-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* Responsive: fewer columns on small screens */
+@media (max-width: 600px) {
+  .slots-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .container {
+    padding: 1rem 1.2rem;
+  }
+  .type-btn {
+    min-width: 90px;
+    font-size: 0.85rem;
+  }
+  .fetch-btn {
+    padding: 0.6rem 2rem;
+    font-size: 0.9rem;
+  }
+}
