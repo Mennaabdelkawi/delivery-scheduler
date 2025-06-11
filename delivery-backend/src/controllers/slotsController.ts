@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import { getAvailableDeliverySlots } from '../services/deliveryScheduler';
 import { DeliveryRequest } from '../models/types';
 
+
 export const handleSlotRequest = (req: Request, res: Response): void => {
   const { cart, now }: DeliveryRequest = req.body;
 
