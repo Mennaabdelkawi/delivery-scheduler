@@ -7,6 +7,7 @@ export interface Product {
   type: ProductType;
 }
 
+
 export interface DeliverySlot {
   id: number;
   datetime: string;  // ISO date-time string
