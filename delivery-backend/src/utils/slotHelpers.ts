@@ -1,4 +1,3 @@
-// utils/slotHelpers.ts
 
 export const isWeekday = (date: Date): boolean => {
   const day = date.getDay();
