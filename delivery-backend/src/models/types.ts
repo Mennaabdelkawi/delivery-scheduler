@@ -4,6 +4,7 @@ export interface Product {
   type: 'in-stock' | 'fresh-food' | 'external';
 }
 
+
 export interface Slot {
   id: number;
   datetime: string;
